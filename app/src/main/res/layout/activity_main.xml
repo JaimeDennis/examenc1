@@ -7,13 +7,79 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:gravity="center"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="Tu Banco Movil"
+            android:textSize="25sp"
+            android:textColor="@color/black"></TextView>
+        <!-- ImageView para la imagen -->
+        <ImageView
+            android:id="@+id/imgbanco"
+            android:layout_width="196dp"
+            android:layout_height="179dp"
+            android:contentDescription="Banco logo"
+            android:src="@mipmap/shitshu" />
+        <TextView
+            android:id="@+id/lblsesion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="BancoMAZ"
+            android:textSize="27sp"
+            android:textColor="@color/shitsu"
+            />
+        <TextView
+            android:id="@+id/lblsesion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="And. Rio Presidio #14421 Av. Montevideo"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/lblsesion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Inicio de Sesion"
+            android:textSize="18sp" />
+
+        <EditText
+            android:id="@+id/txtuser"
+            android:layout_width="339dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:hint="Usuario" />
+
+        <EditText
+            android:id="@+id/txtpass"
+            android:layout_width="342dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:hint="Contraseña"
+            android:inputType="textPassword" />
+
+        <Button
+            android:id="@+id/btnEntrar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:text="Entrar" />
+
+        <Button
+            android:id="@+id/btnCerrar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Salir"
+            />
+
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
