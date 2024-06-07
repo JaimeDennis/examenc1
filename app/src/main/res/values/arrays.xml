@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="movimientos">
+        <item name="Consultar">Consultar</item>
+        <item name="Depositar">Depositar</item>
+        <item name="Retirar">Retirar</item>
+    </string-array>
+
+</resources>
