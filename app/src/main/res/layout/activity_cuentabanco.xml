@@ -5,111 +5,116 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".movimientocuenta">
+    tools:context=".cuentabancoActivity">
 
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:id="@+id/firstColumn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:padding="16dp"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="34dp">
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:padding="16dp">
 
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:padding="16dp">
-
-            <TextView
-                android:id="@+id/lbluser"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:text="Usuario:"
-                android:textAlignment="center"
-                android:textSize="23sp" />
-
-            <EditText
-                android:id="@+id/txtNumCuenta"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="Numero de Cuenta"
-                android:inputType="number" />
-
-            <EditText
-                android:id="@+id/txtNombre"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="Nombre" />
-
-            <EditText
-                android:id="@+id/txtSaldo"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="Saldo" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:gravity="bottom"
-            android:padding="16dp">
-
-            <Spinner
-                android:id="@+id/spnMov"
-                android:layout_width="274dp"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/textViewTitulo"
-                android:layout_centerHorizontal="true"
-                android:layout_marginTop="24dp"
-                android:entries="@array/movimientos" />
-
-            <EditText
-                android:id="@+id/txtcantidad"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="Cantidad a depositar o retirar" />
-
-            <EditText
-                android:id="@+id/txtnuevoSaldo"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="Cantidad a depositar o retirar" />
-
-
-        </LinearLayout>
-
-        <LinearLayout
-            style="?android:attr/buttonBarStyle"
+        <TextView
+            android:id="@+id/lbluser"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
             android:gravity="center"
-            android:orientation="horizontal">
+            android:text="Usuario:"
+            android:textAlignment="center"
+            android:textSize="23sp" />
 
-            <Button
-                android:id="@+id/btnaplicar"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Calcular" />
+        <EditText
+            android:id="@+id/txtNumCuenta"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Numero de Cuenta"
+            android:inputType="number" />
 
-            <Button
-                android:id="@+id/btnLimpiar"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:text="Limpiar" />
+        <EditText
+            android:id="@+id/txtNombre"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Nombre" />
 
-            <Button
-                android:id="@+id/btnCerrar"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Cerrar" />
+        <EditText
+            android:id="@+id/txtBanco"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Banco" />
 
-        </LinearLayout>
+        <EditText
+            android:id="@+id/txtSaldo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:hint="Saldo" />
+    </LinearLayout>
 
+    <LinearLayout
+        android:id="@+id/secondColumn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="304dp"
+        android:orientation="vertical"
+        android:padding="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <Spinner
+            android:id="@+id/spnMov"
+            android:layout_width="274dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:entries="@array/movimientos" />
+
+        <EditText
+            android:id="@+id/txtcantidad"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Cantidad a depositar o retirar" />
+
+        <EditText
+            android:id="@+id/txtnuevoSaldo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Saldo Nuevo" />
+    </LinearLayout>
+
+    <LinearLayout
+        style="?android:attr/buttonBarStyle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/firstColumn"
+        app:layout_constraintVertical_bias="0.682">
+
+        <Button
+            android:id="@+id/btnaplicar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Calcular" />
+
+        <Button
+            android:id="@+id/btnLimpiar"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="Limpiar" />
+
+        <Button
+            android:id="@+id/btnCerrar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cerrar" />
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

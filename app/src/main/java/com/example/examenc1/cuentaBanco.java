@@ -1,41 +1,33 @@
 package com.example.examenc1;
 
-import kotlin.contracts.Returns;
-
 public class cuentaBanco {
     private String numCuenta;
-    private String Nombre;
-    private String Banco;
-    private  float Saldo;
+    private String nombre;
+    private String banco;
+    private float saldo;
 
-    public cuentaBanco (String cuenta, String nombre, String banco, float saldo){
-        numCuenta.this = cuenta;
-        Nombre.this = nombre;
-        Banco.this = banco;
-        Saldo.this = saldo;
-
+    public cuentaBanco(String numCuenta, String nombre, String banco, float saldo){
+        this.numCuenta = numCuenta;
+        this.nombre = nombre;
+        this.banco = banco;
+        this.saldo = saldo;
     }
 
     public int retirarDinero(float retiro){
-        if(retiro<=Saldo){
-            Saldo=Saldo-retiro;
+        if(retiro <= saldo){
+            saldo = saldo - retiro;
             return 1;
         } else {
-
             return 0;
         }
     }
 
-    public int DepositarDinero(float deposito){
-        Saldo=Saldo+deposito;
-
+    public int depositarDinero(float deposito){
+        saldo = saldo + deposito;
         return 1;
     }
 
     public float obtenerSaldo(){
-        return Saldo;
+        return saldo;
     }
-
-
-
 }
